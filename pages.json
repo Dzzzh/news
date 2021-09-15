@@ -1,0 +1,85 @@
+{
+	"easycom": {
+	  "autoscan": true,
+	  "custom": {
+	    "^d-(.*)": "@/components/d-$1/d-$1.vue" ,// 匹配components目录内的vue文件
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	    //"^vue-file-(.*)": "packageName/path/to/vue-file-$1.vue" // 匹配node_modules内的vue文件
+	  }
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabbar/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/tabbar/my/my",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/tabbar/follow/follow",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+     
+        ,{
+            "path" : "pages/homeSearch/homeSearch",
+            "style" :                                                                                    
+            {
+				"navigationStyle": "custom",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detailPage/detailPage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"tabBar":{
+		"color":"#666",
+		"selectedColor":"#f07373",
+		"backgroundColor":"#FFFFFF",
+		"list":[{
+			"text":"首页",
+			"pagePath":"pages/tabbar/index/index",
+			"iconPath":"static/home.png",
+			"selectedIconPath":"static/home-active.png"
+		},{
+			"text":"关注",
+			"pagePath":"pages/tabbar/follow/follow",
+			"iconPath":"static/follow.png",
+			"selectedIconPath":"static/follow-active.png"
+		},{
+			"text":"我的",
+			"pagePath":"pages/tabbar/my/my",
+			"iconPath":"static/my.png",
+			"selectedIconPath":"static/my-active.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "News",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}
